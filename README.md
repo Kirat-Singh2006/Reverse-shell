@@ -1,25 +1,33 @@
-# Reverse-shell
- Basic Reverse Shell (Client-Server)
+Reverse Shell (Educational Network Security Demonstration)
 
-Wrench is a simple client-server reverse shell written in Python. The server sends commands to a connected client, which executes them and returns the output. It also supports simple messaging with a "say" prefix.
+Overview
 
-⚠️ FOR EDUCATIONAL AND AUTHORIZED USE ONLY
-Do not use this on any system you do not own or have explicit permission to access.
-🧰 Project Structure
+This project demonstrates how a reverse shell operates by establishing an outbound connection from a target system to a remote listener. It is intended to help security practitioners understand common remote access techniques used by attackers.
 
-    client.py – The reverse shell client that connects to the server.
+Purpose
 
-    server.py – The control server that sends commands and receives responses.
+The goal of this project is to:
+	•	illustrate how reverse shells bypass inbound firewall restrictions
+	•	improve understanding of command-and-control communication
+	•	help defenders identify and block unauthorized remote access
 
-⚙️ Features
+Technical Highlights
+	•	Language: Python
+	•	Uses socket-based communication
+	•	Demonstrates outbound connection behavior
+	•	Simulates interactive remote command execution
 
-✅ Remote command execution
-✅ One-line messaging (say <message>)
-✅ Basic console-based interface
-✅ ASCII art startup banner
-✅ Graceful disconnect with exit command
-🔧 Requirements
+Defensive Perspective
 
-    Python 3.x
+From a defensive standpoint, this project highlights:
+	•	indicators of compromise such as suspicious outbound connections
+	•	the importance of egress traffic filtering
+	•	how IDS/IPS and EDR solutions detect abnormal shell behavior
+	•	why network monitoring is critical for detecting C2 traffic
 
-    No external libraries needed (uses socket and subprocess)
+Disclaimer
+
+This project is intended strictly for educational, research, and authorized testing purposes in controlled environments. Unauthorized use against systems without explicit permission is illegal and unethical.
+
+
+
